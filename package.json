@@ -25,12 +25,6 @@
     "eslint": "eslint --ext .ts --fix './src/**/*.{ts,tsx}'",
     "eject": "react-scripts eject"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && yarn tsc",
-      "pre-push": "CI=true yarn test && CI=true yarn build && CI=true yarn fab:build"
-    }
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -53,6 +47,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.2",
     "prettier": "^2.4.0"
   }

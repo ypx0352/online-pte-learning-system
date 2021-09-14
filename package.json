@@ -20,7 +20,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "prettier:lint": "yarn prettier --config .prettierrc.js --check './src/**/*.{ts,tsx}'",
+    "prettier:fix": "yarn prettier --config .prettierrc.js --write './src/**/*.{ts,tsx}'",
+    "eslint": "eslint --ext .ts --fix './src/**/*.{ts,tsx}'",
     "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn tsc",
+      "pre-push": "CI=true yarn test && CI=true yarn build && CI=true yarn fab:build"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +48,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "prettier": "^2.4.0"
   }
 }

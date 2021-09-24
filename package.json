@@ -32,7 +32,9 @@
     "test": "react-scripts test",
     "prettier:lint": "yarn prettier --config .prettierrc.js --check './src/**/*.{ts,tsx}'",
     "prettier:fix": "yarn prettier --config .prettierrc.js --write './src/**/*.{ts,tsx}'",
+    "prettier:fix-win": "yarn prettier --config .prettierrc.js --write ./src/**/*.{ts,tsx}",
     "eslint": "eslint --ext .ts --fix './src/**/*.{ts,tsx}'",
+    "eslint-win": "eslint --ext .ts --fix ./src/**/*.{ts,tsx}",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

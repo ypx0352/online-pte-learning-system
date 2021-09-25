@@ -8,7 +8,7 @@ import styled from "styled-components"
 import { StyledButton } from "styles/button"
 
 const HeroWrapper = styled.div`
-  position: absolute;
+  // position: absolute;
   height: auto;
   padding: 2rem 0;
   min-height: 400px;

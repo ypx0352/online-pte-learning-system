@@ -1,9 +1,9 @@
 .PracticeAreaCard{
     background-color: white;
-    width: 150px;
+    width: 400px;
     border-radius: 15px;
     padding: 30px 20px;
-    margin:2px;
+    margin:10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
 }
 .CardIcon{
     background-color: #4FD1C5;
-    width: 20px;
+    width: 40px;
     padding: 10px;
     border-radius: 8px;
     display: flex;
@@ -20,28 +20,27 @@
     align-items: center;
 }
 .CardTitle{
-    padding: 10px;
-    font-size: 10px;
+    padding: 20px;
+    font-size: 20px;
     font-weight: 700;
 }
 .CardContent{
-    padding: 0px;
-    font-size: 8px;
+    padding: 10px;
+    font-size: 15px;
     color: #C4C4C4;
     padding-bottom: 5px;
 }
 .CardPractice{
-    padding-top: 5px;
+    padding-top: 30px;
     display: flex;
     flex-direction: row;
     align-items:center;
-    border-top: 1px transparent solid;
-    border-image: linear-gradient(0deg, white 0%, black 40%, white) 1 10;
+    /* border-top: 1px transparent solid;
+    border-image: linear-gradient(0deg, white 0%, black 40%, white) 1 10; */
 }
 .CardPracticWord{
-    
-    width: 50px;
-    font-size: 10px;
+    width: 110px;
+    font-size: 20px;
     font-weight: 700;
 }
 .PracticeAreaCards{

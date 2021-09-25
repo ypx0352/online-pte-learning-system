@@ -1,5 +1,6 @@
 import "./WeeklyPredictionCard.css"
-// import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 
 export const PredictionCard = (props) => {
   return (
@@ -26,7 +27,7 @@ export const WeeklyPredictionCard = () => {
       <div className="WeeklyPredictionArea">{cards}</div>
       <div className="PredictionPractice">
         <div className="PredictionPracticWord">PRACTICE NOW</div>
-        {/* <ArrowForwardIcon fontSize="small" /> */}
+        <ArrowForwardIcon fontSize="small" />
       </div>
     </div>
   )

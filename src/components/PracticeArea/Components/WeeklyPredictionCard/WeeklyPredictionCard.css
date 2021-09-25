@@ -1,0 +1,43 @@
+
+.WeeklyPredictionCard{
+    background-image: url("../../../../assets/images/WeeklyPredictionCard.jpg") ;
+    vertical-align: middle;
+    background-size:100%;
+    color: white;
+    padding: 40px 20px;
+    margin: 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.WeeklyPredictionArea{
+    display: flex;
+    justify-content: space-around;
+}
+.PredictionCard{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.PredictionNum{
+    font-size: 40px;
+    font-weight: 500;
+}
+.PredictionPractice{
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+@media only screen and (max-width: 768px) {
+    .PredictionNum{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .WeeklyPredictionCard{
+        padding: 20px 20px;
+
+    }
+  }

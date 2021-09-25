@@ -1,0 +1,12 @@
+.PracticeArea{
+    background-color: #eeeded;
+}
+.PracticeAreaTitle{
+    padding: 20px 5px;
+    margin: 10px;
+    width: 180px;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid;
+    border-color:#BFEEE9 ;
+}

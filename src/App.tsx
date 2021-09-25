@@ -1,10 +1,9 @@
-import React from "react"
+import { PracticeArea } from "./components/PracticeArea/PracticeArea"
 
 function App() {
   return (
     <div className="App">
-      <a>hello world</a>
-      <div>shuaishuai</div>
+      <PracticeArea />
     </div>
   )
 }

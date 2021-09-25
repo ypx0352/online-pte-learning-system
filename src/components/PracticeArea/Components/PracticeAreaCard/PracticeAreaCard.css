@@ -1,0 +1,60 @@
+.PracticeAreaCard{
+    background-color: white;
+    width: 150px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin:2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.CardIcon{
+    background-color: #4FD1C5;
+    width: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.CardTitle{
+    padding: 10px;
+    font-size: 10px;
+    font-weight: 700;
+}
+.CardContent{
+    padding: 0px;
+    font-size: 8px;
+    color: #C4C4C4;
+    padding-bottom: 5px;
+}
+.CardPractice{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    border-top: 1px transparent solid;
+    border-image: linear-gradient(0deg, white 0%, black 40%, white) 1 10;
+}
+.CardPracticWord{
+    
+    width: 50px;
+    font-size: 10px;
+    font-weight: 700;
+}
+.PracticeAreaCards{
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 25px;
+}
+@media only screen and (max-width: 768px) {
+    .PracticeAreaCards {
+        display: flex;
+        flex-wrap:wrap ;
+    }
+    .PracticeAreaCard{
+        padding: 30px 20px;
+    }
+  }

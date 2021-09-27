@@ -1,10 +1,89 @@
-import "./PracticeAreaCard.css"
-
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import CreateIcon from "@mui/icons-material/Create"
 import HeadphonesOutlinedIcon from "@mui/icons-material/HeadphonesOutlined"
 import MenuBookIcon from "@mui/icons-material/MenuBook"
 import SettingsVoiceIcon from "@mui/icons-material/SettingsVoice"
+import styled from "styled-components"
+
+const PracticeAreaCardStyle = styled.div`
+   {
+    background-color: white;
+    width: 400px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    width: 200px;
+    margin: 0px;
+    padding: 30px 20px;
+  }
+`
+
+const CardContent = styled.div`
+  padding: 10px;
+  font-size: 15px;
+  color: #c4c4c4;
+  padding-bottom: 5px;
+`
+const CardIcon = styled.div`
+  background-color: #4fd1c5;
+  width: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+const CardTitle = styled.div`
+   {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 0px 0px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+`
+
+const CardPractice = styled.div`
+   {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+`
+const CardPracticWord = styled.div`
+   {
+    width: 110px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 80px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+`
+const PracticeAreaCardsStyle = styled.div`
+   {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 25px;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+`
 
 export const PracticeAreaCard = (props) => {
   const IconGraph = () => {
@@ -26,17 +105,17 @@ export const PracticeAreaCard = (props) => {
   }
 
   return (
-    <div className="PracticeAreaCard">
-      <div className="CardIcon">
+    <PracticeAreaCardStyle>
+      <CardIcon>
         <IconGraph />
-      </div>
-      <div className="CardTitle">{props.info.title}</div>
-      <div className="CardContent">Weekly Update</div>
-      <div className="CardPractice">
-        <div className="CardPracticWord">PRACTICE</div>
+      </CardIcon>
+      <CardTitle>{props.info.title}</CardTitle>
+      <CardContent>Weekly Update</CardContent>
+      <CardPractice>
+        <CardPracticWord>PRACTICE</CardPracticWord>
         <ArrowForwardIcon />
-      </div>
-    </div>
+      </CardPractice>
+    </PracticeAreaCardStyle>
   )
 }
 
@@ -52,5 +131,5 @@ export const PracticeAreaCards = () => {
     return <PracticeAreaCard info={item} key={item.title} />
   })
 
-  return <div className="PracticeAreaCards">{cards}</div>
+  return <PracticeAreaCardsStyle>{cards}</PracticeAreaCardsStyle>
 }

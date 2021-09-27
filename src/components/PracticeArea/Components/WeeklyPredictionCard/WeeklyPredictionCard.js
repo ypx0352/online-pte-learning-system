@@ -1,13 +1,69 @@
-import "./WeeklyPredictionCard.css"
-
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
+import backgroundImage from "assets/images/PracticeArea/WeeklyPredictionCard.jpg"
+import styled from "styled-components"
+
+const WeeklyPredictionCardStyle = styled.div`
+   {
+    background-image: url(${backgroundImage});
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-size: 100%;
+    color: white;
+    padding: 40px 20px;
+    margin: 40px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 20px 20px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+`
+const WeeklyPredictionArea = styled.div`
+   {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+  }
+`
+const PredictionCardStyle = styled.div`
+   {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+`
+
+const PredictionNum = styled.div`
+   {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+    font-weight: 500;
+  }
+`
+const PredictionPractice = styled.div`
+   {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+`
 
 export const PredictionCard = (props) => {
   return (
-    <div className="PredictionCard">
-      <div className="PredictionNum">{props.info.Num}</div>
+    <PredictionCardStyle>
+      <PredictionNum>{props.info.Num}</PredictionNum>
       <div className="PredictionType">{props.info.Type}</div>
-    </div>
+    </PredictionCardStyle>
   )
 }
 
@@ -22,13 +78,13 @@ export const WeeklyPredictionCard = () => {
     return <PredictionCard info={item} key={item.Type} />
   })
   return (
-    <div className="WeeklyPredictionCard">
+    <WeeklyPredictionCardStyle>
       <div className="WeeklyPredictionCardDate">Weekly Prediction 13/09 - 19/09</div>
-      <div className="WeeklyPredictionArea">{cards}</div>
-      <div className="PredictionPractice">
+      <WeeklyPredictionArea>{cards}</WeeklyPredictionArea>
+      <PredictionPractice>
         <div className="PredictionPracticWord">PRACTICE NOW</div>
         <ArrowForwardIcon fontSize="small" />
-      </div>
-    </div>
+      </PredictionPractice>
+    </WeeklyPredictionCardStyle>
   )
 }

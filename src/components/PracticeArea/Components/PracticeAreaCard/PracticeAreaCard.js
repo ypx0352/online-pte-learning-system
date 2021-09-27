@@ -19,7 +19,7 @@ const PracticeAreaCardStyle = styled.div`
   }
   @media (max-width: 768px) {
     width: 200px;
-    margin: 0px;
+    margin: 10px;
     padding: 30px 20px;
   }
 `
@@ -47,7 +47,7 @@ const CardTitle = styled.div`
     font-weight: 700;
   }
   @media only screen and (max-width: 768px) {
-    padding: 0px 0px;
+    padding: 10px 0px;
     font-size: 15px;
     font-weight: 700;
   }

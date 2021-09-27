@@ -10,7 +10,6 @@ const PracticeAreaStyle = styled.div`
 const PracticeAreaTitle = styled.div`
    {
     padding: 20px 5px;
-    margin: 10px;
     width: 300px;
     font-size: 30px;
     font-weight: 700;

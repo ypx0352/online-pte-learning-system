@@ -1,4 +1,5 @@
 import AddIcon from "@mui/icons-material/Add"
+import { useState } from "react"
 import styled from "styled-components"
 
 const DetailWrapper = styled.div`
@@ -29,12 +30,12 @@ const DetailTitle = styled.h3`
   }
 `
 
-const DetailContent = styled.ul`
+const DetailContent = styled.ul<{ clicked?: boolean }>`
   list-style-type: none;
   padding: 0;
 
   @media screen and (max-width: 768px) {
-    display: none;
+    display: ${(props) => (props.clicked ? "block" : "none")};
   }
 `
 
@@ -52,22 +53,32 @@ const StyledA = styled.a`
   }
 `
 
-const ADD = styled(AddIcon)`
+const ADD = styled(AddIcon)<{ clicked?: boolean }>`
   position: relative;
   top: 5px;
+  transform: ${(props) => (props.clicked ? "rotate(45deg)" : "rotate(0deg)")};
+  transition: transform 0.5s;
 `
 
 const ContactDetail = (props: { title: string; line1: string; line2: string; line3: string }) => {
+  const [clicking, setClicking] = useState(false)
+
+  function handleClick() {
+    if (clicking === false) {
+      setClicking(true)
+    } else setClicking(false)
+  }
+
   return (
     <DetailWrapper>
-      <DetailDownlist>
+      <DetailDownlist onClick={handleClick}>
         {props.title}
         <span>
-          <ADD />
+          <ADD clicked={clicking} />
         </span>
       </DetailDownlist>
       <DetailTitle>{props.title}</DetailTitle>
-      <DetailContent>
+      <DetailContent clicked={clicking}>
         <StyledLi>
           <StyledA href="#">{props.line1}</StyledA>
         </StyledLi>

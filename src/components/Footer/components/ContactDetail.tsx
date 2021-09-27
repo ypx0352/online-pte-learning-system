@@ -52,8 +52,7 @@ const StyledA = styled.a`
     text-decoration: underline;
   }
 `
-
-const ADD = styled(AddIcon)<{ clicked?: boolean }>`
+const StyledSpan = styled.span<{ clicked?: boolean }>`
   position: relative;
   top: 5px;
   transform: ${(props) => (props.clicked ? "rotate(45deg)" : "rotate(0deg)")};
@@ -73,9 +72,9 @@ const ContactDetail = (props: { title: string; line1: string; line2: string; lin
     <DetailWrapper>
       <DetailDownlist onClick={handleClick}>
         {props.title}
-        <span>
-          <ADD clicked={clicking} />
-        </span>
+        <StyledSpan clicked={clicking}>
+          <AddIcon />
+        </StyledSpan>
       </DetailDownlist>
       <DetailTitle>{props.title}</DetailTitle>
       <DetailContent clicked={clicking}>

@@ -1,4 +1,5 @@
 import Hero from "components/Hero/Hero"
+import StudyMaterial from "components/StudyMaterial/StudyMaterial"
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { createGlobalStyle } from "styled-components"
@@ -16,6 +17,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Hero />
+      <StudyMaterial />
     </ThemeProvider>
   )
 }

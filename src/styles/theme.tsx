@@ -3,7 +3,8 @@ const color = {
   secondary: "#BFEEE9",
   secondary_deep: "#207971",
   accent: "#2D3748",
-  text_gray: "#A0AEC0"
+  text_gray: "#A0AEC0",
+  background_color: "#eeeded"
 }
 
 const fontsize = {

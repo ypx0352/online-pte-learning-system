@@ -1,10 +1,9 @@
 import Hero from "components/Hero/Hero"
+import { PracticeArea } from "components/PracticeArea/PracticeArea"
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { createGlobalStyle } from "styled-components"
 import theme from "styles/theme"
-
-import { PracticeArea } from "./components/PracticeArea/PracticeArea"
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
@@ -19,8 +18,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Hero />
+        <PracticeArea />
       </ThemeProvider>
-      <PracticeArea />
     </>
   )
 }

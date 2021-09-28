@@ -5,7 +5,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook"
 import SettingsVoiceIcon from "@mui/icons-material/SettingsVoice"
 import styled from "styled-components"
 
-const PracticeAreaCardStyle = styled.div`
+const PracticeAreaContainer = styled.div`
    {
     background-color: white;
     width: 400px;
@@ -27,11 +27,11 @@ const PracticeAreaCardStyle = styled.div`
 const CardContent = styled.div`
   padding: 10px;
   font-size: 15px;
-  color: #c4c4c4;
+  color: ${(props) => props.theme.color.text_gray};
   padding-bottom: 5px;
 `
 const CardIcon = styled.div`
-  background-color: #4fd1c5;
+  background-color: ${(props) => props.theme.color.primary};
   width: 40px;
   padding: 10px;
   border-radius: 8px;
@@ -43,7 +43,7 @@ const CardIcon = styled.div`
 const CardTitle = styled.div`
    {
     padding: 20px;
-    font-size: 20px;
+    font-size: ${(props) => props.theme.fontsize.subtitle};
     font-weight: 700;
   }
   @media only screen and (max-width: 768px) {
@@ -64,7 +64,7 @@ const CardPractice = styled.div`
 const CardPracticWord = styled.div`
    {
     width: 110px;
-    font-size: 20px;
+    font-size: ${(props) => props.theme.fontsize.subtitle};
     font-weight: 700;
   }
   @media only screen and (max-width: 768px) {
@@ -105,7 +105,7 @@ export const PracticeAreaCard = (props) => {
   }
 
   return (
-    <PracticeAreaCardStyle>
+    <PracticeAreaContainer>
       <CardIcon>
         <IconGraph />
       </CardIcon>
@@ -115,7 +115,7 @@ export const PracticeAreaCard = (props) => {
         <CardPracticWord>PRACTICE</CardPracticWord>
         <ArrowForwardIcon />
       </CardPractice>
-    </PracticeAreaCardStyle>
+    </PracticeAreaContainer>
   )
 }
 

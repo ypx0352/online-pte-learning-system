@@ -2,7 +2,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
 import backgroundImage from "assets/images/PracticeArea/WeeklyPredictionCard.jpg"
 import styled from "styled-components"
 
-const WeeklyPredictionCardStyle = styled.div`
+const WeeklyPredictionContainer = styled.div`
    {
     background-image: url(${backgroundImage});
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@ const WeeklyPredictionCardStyle = styled.div`
     padding: 40px 20px;
     margin: 40px;
     border-radius: 15px;
-    font-size: 20px;
+    font-size: ${(props) => props.theme.fontsize.subtitle};
     font-weight: 500;
   }
   @media only screen and (max-width: 768px) {
@@ -42,11 +42,11 @@ const PredictionCardStyle = styled.div`
 
 const PredictionNum = styled.div`
    {
-    font-size: 40px;
+    font-size: ${(props) => props.theme.fontsize.title_lg};
     font-weight: 500;
   }
   @media only screen and (max-width: 768px) {
-    font-size: 20px;
+    font-size: ${(props) => props.theme.fontsize.subtitle};
     font-weight: 500;
   }
 `
@@ -78,13 +78,13 @@ export const WeeklyPredictionCard = () => {
     return <PredictionCard info={item} key={item.Type} />
   })
   return (
-    <WeeklyPredictionCardStyle>
+    <WeeklyPredictionContainer>
       <div className="WeeklyPredictionCardDate">Weekly Prediction 13/09 - 19/09</div>
       <WeeklyPredictionArea>{cards}</WeeklyPredictionArea>
       <PredictionPractice>
         <div className="PredictionPracticWord">PRACTICE NOW</div>
         <ArrowForwardIcon fontSize="small" />
       </PredictionPractice>
-    </WeeklyPredictionCardStyle>
+    </WeeklyPredictionContainer>
   )
 }

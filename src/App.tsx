@@ -1,4 +1,5 @@
 import Hero from "components/Hero/Hero"
+import { PracticeArea } from "components/PracticeArea/PracticeArea"
 import StudyMaterial from "components/StudyMaterial/StudyMaterial"
 import React from "react"
 import { ThemeProvider } from "styled-components"
@@ -17,6 +18,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Hero />
+      <PracticeArea />
       <StudyMaterial />
     </ThemeProvider>
   )

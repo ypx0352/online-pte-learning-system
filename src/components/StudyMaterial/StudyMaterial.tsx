@@ -11,7 +11,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   row-gap: 5vh;
-  top: 600px;
   min-height: 40vh;
   padding: 2% 10%;
 `

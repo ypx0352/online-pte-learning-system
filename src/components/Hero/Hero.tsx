@@ -1,17 +1,23 @@
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded"
+import heroBackground from "assets/images/hero/group.png"
 import heroImage from "assets/images/hero/Hero.png"
-import line from "assets/images/hero/line.png"
-import patter3 from "assets/images/hero/pattern3.png"
-import waveImage1 from "assets/images/hero/wave1.png"
-import waveImage2 from "assets/images/hero/wave2.png"
 import styled from "styled-components"
 import { StyledButton } from "styles/button"
 
 const HeroWrapper = styled.div`
-  // position: absolute;
+  position: relative;
   height: auto;
-  padding: 2rem 0;
+  width: 100%;
+  padding: 0;
   min-height: 400px;
+  background-image: url(${heroBackground});
+  background-position: top;
+  background-size: cover;
+  @media only screen and (max-width: 768px) {
+    background-repeat: no-repeat;
+    background-size: 800px 100% cover;
+    background-position: bottom;
+  }
 `
 
 const HeroContainer = styled.div`
@@ -49,27 +55,6 @@ const PracticeNowButton = styled(StyledButton)`
     margin: 2rem 0;
   }
 `
-
-const BackgroundWave = styled.img<{ fullWidth?: boolean }>`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  object-fit: cover;
-  object-position: 100% 0;
-  width: ${(props) => (props.fullWidth ? "100vw" : "75vw")};
-  max-height: 300px;
-  z-index: -1;
-`
-
-const BackgroundElement = styled.img<{ left?: string; right?: string; bottom?: string; width?: string }>`
-  position: absolute;
-  bottom: ${(props) => props.bottom};
-  left: ${(props) => props.left};
-  right: ${(props) => props.right};
-  width: ${(props) => props.width};
-  object-fit: cover;
-  z-index: -1;
-`
 const StyledH5 = styled.h5`
   && {
     font-size: ${(props) => props.theme.fontsize.subtitle};
@@ -106,10 +91,6 @@ const Hero = () => {
           <HeroImage src={heroImage} alt="cool kid study image" />
         </ImageContainer>
       </HeroContainer>
-      <BackgroundWave fullWidth={false} src={waveImage2}></BackgroundWave>
-      <BackgroundWave fullWidth={true} src={waveImage1}></BackgroundWave>
-      <BackgroundElement bottom={"45vh"} right={"0"} width={"75vw"} src={line}></BackgroundElement>
-      <BackgroundElement bottom={"38vh"} right={"40vw"} width={"3rem"} src={patter3}></BackgroundElement>
     </HeroWrapper>
   )
 }

@@ -1,4 +1,6 @@
+
 import Hero from "components/Hero/Hero"
+import { PracticeArea } from "components/PracticeArea/PracticeArea"
 import StudyMaterial from "components/StudyMaterial/StudyMaterial"
 import React from "react"
 import { ThemeProvider } from "styled-components"
@@ -12,11 +14,14 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
+import NavBar from "./components/Navbar/Navbar"
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Hero />
+      <PracticeArea />
       <StudyMaterial />
     </ThemeProvider>
   )

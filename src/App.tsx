@@ -1,3 +1,4 @@
+
 import Hero from "components/Hero/Hero"
 import { PracticeArea } from "components/PracticeArea/PracticeArea"
 import StudyMaterial from "components/StudyMaterial/StudyMaterial"

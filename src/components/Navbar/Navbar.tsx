@@ -6,12 +6,9 @@ import Upper from "./Upper-part/Upper-part"
 
 const Wrapper = styled.section`
   position: sticky;
-  top: 10px;
-  width: 1440px;
-  height: 94px;
-  border-color: black;
-  border-width: 5px;
-  align-items: center;
+  top: 0rem;
+  background-color: white;
+  width: 100%;
   z-index: 100000;
 `
 

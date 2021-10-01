@@ -3,18 +3,17 @@ import backgroundImage from "assets/images/PracticeArea/WeeklyPredictionCard.jpg
 import styled from "styled-components"
 
 const WeeklyPredictionContainer = styled.div`
-   {
-    background-image: url(${backgroundImage});
-    background-repeat: no-repeat;
-    vertical-align: middle;
-    background-size: 100%;
-    color: white;
-    padding: 40px 20px;
-    margin: 40px;
-    border-radius: 15px;
-    font-size: ${(props) => props.theme.fontsize.subtitle};
-    font-weight: 500;
-  }
+  background-image: url(${backgroundImage});
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-size: 100%;
+  color: white;
+  padding: 40px 40px;
+  margin: 40px 0.5rem;
+  border-radius: 15px;
+  font-size: ${(props) => props.theme.fontsize.subtitle};
+  font-weight: 500;
+
   @media only screen and (max-width: 768px) {
     padding: 20px 20px;
     font-size: 10px;
@@ -22,40 +21,32 @@ const WeeklyPredictionContainer = styled.div`
   }
 `
 const WeeklyPredictionArea = styled.div`
-   {
-    padding: 50px;
-    display: flex;
-    justify-content: space-around;
-  }
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
   @media only screen and (max-width: 768px) {
     padding: 20px;
   }
 `
 const PredictionCardStyle = styled.div`
-   {
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 const PredictionNum = styled.div`
-   {
-    font-size: ${(props) => props.theme.fontsize.title_lg};
-    font-weight: 500;
-  }
+  font-size: ${(props) => props.theme.fontsize.title_lg};
+  font-weight: 500;
   @media only screen and (max-width: 768px) {
     font-size: ${(props) => props.theme.fontsize.subtitle};
     font-weight: 500;
   }
 `
 const PredictionPractice = styled.div`
-   {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `
 
 export const PredictionCard = (props) => {

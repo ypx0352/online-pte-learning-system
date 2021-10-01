@@ -13,6 +13,7 @@ const HeroWrapper = styled.div`
   background-image: url(${heroBackground});
   background-position: top;
   background-size: cover;
+  padding: ${(props) => props.theme.margin.padding_section};
   @media only screen and (max-width: 768px) {
     background-repeat: no-repeat;
     background-size: 800px 100% cover;
@@ -27,11 +28,12 @@ const HeroContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 1440px;
-  margin: ${(props) => props.theme.margin.container};
+  padding: ${(props) => props.theme.margin.container_padding};
+  margin: auto;
 `
 
 const ImageContainer = styled.div`
-  flex-basis: 330px;
+  flex-basis: 300px;
   flex-grow: 2;
 `
 
@@ -40,9 +42,9 @@ const HeroContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  flex-basis: 330px;
+  flex-basis: 300px;
   flex-grow: 3;
-  margin: 1rem;
+  margin-right: 1rem;
 `
 
 const HeroImage = styled.img`

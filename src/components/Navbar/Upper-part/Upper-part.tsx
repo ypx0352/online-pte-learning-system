@@ -1,27 +1,34 @@
 import { Phone as PhoneIcon } from "@material-ui/icons"
 import { Room as RoomIcon } from "@material-ui/icons"
-import React from "react"
 import styled from "styled-components"
 
 const DIV = styled.div`
-  width: 100%;
-  height: 30%;
+  padding: 0.1rem;
+  margin: auto;
+  max-width: 1440px;
 `
 
 const UL = styled.ul`
   background-color: white;
-  display: flex;
   position: relative;
-  width: 20%;
-  left: 70%;
-  font-size: 5px;
-  font-color: #718096;
-  flex-direction: row;
+  display: flex;
+  justify-content: flex-end;
+  font-size: ${(props) => props.theme.fontsize.caption};
+  color: ${(props) => props.theme.color.text_darkgray};
   list-style: none;
-  justify-content: space-around;
+  && {
+    margin: 0.5rem 0;
+    padding: ${(props) => props.theme.margin.container_padding};
+  }
 `
 const LI = styled.li`
+  display: flex;
+  align-items: center;
   list-style-type: none;
+  && {
+    margin: 0;
+    margin-left: ${(props) => props.theme.margin.item};
+  }
 `
 const Upper = () => (
   <DIV>

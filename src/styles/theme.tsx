@@ -4,8 +4,9 @@ const color = {
   secondary_deep: "#207971",
   accent: "#2D3748",
   text_gray: "#A0AEC0",
-  text_dark: "#2D3748"
-  background_color: "#eeeded"
+  text_darkgray: "#718096",
+  text_dark: "#2D3748",
+  background_color: "#f8f9fa"
 }
 
 const fontsize = {
@@ -20,8 +21,10 @@ const fontsize = {
 
 const margin = {
   section: "1.5rem",
-  card: "0.5rem",
-  container: "0 3rem"
+  item: "2rem",
+  container_padding: "0 4rem",
+  margin_content: "2rem 0",
+  padding_section: "1.5rem 0"
 }
 
 export default {

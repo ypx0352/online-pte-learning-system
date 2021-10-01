@@ -5,14 +5,16 @@ import styled from "styled-components"
 import Text from "./Text/Text"
 
 const Wrapper = styled.div`
-  background-color: #f8f9fa;
+  background-color: ${(props) => props.theme.color.background_color};
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   row-gap: 5vh;
   min-height: 40vh;
-  padding: 2% 10%;
+  padding: ${(props) => props.theme.margin.padding_section};
+`
+const Container = styled.section`
+  padding: ${(props) => props.theme.margin.container_padding};
+  margin: auto;
+  max-width: 1440px;
 `
 
 const Header = styled.section`
@@ -20,7 +22,6 @@ const Header = styled.section`
   flex-direction: column;
   justify-content: space-evenly;
   row-gap: 3vh;
-  width: 40vw;
   min-width: 20vw;
   height: auto;
 `
@@ -30,52 +31,53 @@ const Title = styled.h4`
   text-align: left;
   color: ${(props) => props.theme.color.accent};
   margin: 0;
-`
-
-const Bar = styled.div`
-  width: 38.5vw;
-  height: 0.6vh;
-  padding-left: 1%;
-  background-color: ${(props) => props.theme.color.secondary};
-`
-
-const Container = styled.section`
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  border-radius: 20px;
-  background-color: #fff;
-  padding: 1% 1%;
-  min-height: 40vh;
+  border-bottom: 5px solid;
+  border-color: ${(props) => props.theme.color.secondary};
+  padding: 20px 5px;
+  max-width: 550px;
 `
 
 const Cards = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+`
+
+const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  margin: ${(props) => props.theme.margin.margin_content};
+  padding: 1rem;
+  background-color: #fff;
+  min-height: 40vh;
 `
 
 const StudyMaterial: React.FC = () => {
   return (
     <Wrapper>
-      <Header>
-        <Title>Download PTE Study Material</Title>
-        <Bar />
-      </Header>
       <Container>
-        <Cards>
-          <Card text={"Speaking Template"} />
-          <Text text={["Material #1", "Speaking Template", "Describe Image Template", "Re-tell Lecture Template"]} />
-        </Cards>
-        <Cards>
-          <Card text={"Writing Template"} />
-          <Text text={["Material #2", "Writing Template", "Write Essay template", "Summarize Written Text Template"]} />
-        </Cards>
-        <Cards>
-          <Card text={"Listening Template"} />
-          <Text text={["Material #3", "Listening Template", "Summarize Spoken Text Template", "null"]} />
-        </Cards>
+        <Header>
+          <Title>Download PTE Study Material</Title>
+        </Header>
+        <Content>
+          <Cards>
+            <Card text={"Speaking Template"} />
+            <Text text={["Material #1", "Speaking Template", "Describe Image Template", "Re-tell Lecture Template"]} />
+          </Cards>
+          <Cards>
+            <Card text={"Writing Template"} />
+            <Text
+              text={["Material #2", "Writing Template", "Write Essay template", "Summarize Written Text Template"]}
+            />
+          </Cards>
+          <Cards>
+            <Card text={"Listening Template"} />
+            <Text text={["Material #3", "Listening Template", "Summarize Spoken Text Template", "null"]} />
+          </Cards>
+        </Content>
       </Container>
     </Wrapper>
   )

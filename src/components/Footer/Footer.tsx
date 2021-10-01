@@ -5,8 +5,13 @@ import ContactDetail from "./components/ContactDetail"
 
 const FooterWrapper = styled.div`
   background-color: #2d3748;
+  padding: ${(props) => props.theme.margin.padding_section};
+  padding-bottom: 0.5rem;
+`
+const FooterContainer = styled.div`
   color: #ffffff;
   max-width: 1440px;
+  padding: ${(props) => props.theme.margin.container_padding};
   margin: auto;
 `
 
@@ -64,17 +69,19 @@ const data3: { title: string; line1: string; line2: string; line3: string } = {
 const Footer = () => {
   return (
     <FooterWrapper>
-      <ContactWrapper>
-        <ContactDetail {...data1} />
-        <ContactDetail {...data2} />
-        <ContactDetail {...data3} />
-      </ContactWrapper>
-      <StyledHr />
-      <Copyright>
-        <StyledP>
-          <COPY /> CuckooPTE. All rights reserved.
-        </StyledP>
-      </Copyright>
+      <FooterContainer>
+        <ContactWrapper>
+          <ContactDetail {...data1} />
+          <ContactDetail {...data2} />
+          <ContactDetail {...data3} />
+        </ContactWrapper>
+        <StyledHr />
+        <Copyright>
+          <StyledP>
+            <COPY /> CuckooPTE. All rights reserved.
+          </StyledP>
+        </Copyright>
+      </FooterContainer>
     </FooterWrapper>
   )
 }

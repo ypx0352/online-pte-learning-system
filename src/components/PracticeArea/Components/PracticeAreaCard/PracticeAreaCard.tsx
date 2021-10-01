@@ -6,17 +6,18 @@ import SettingsVoiceIcon from "@mui/icons-material/SettingsVoice"
 import styled from "styled-components"
 
 const PracticeAreaContainer = styled.div`
-   {
-    background-color: white;
-    width: 400px;
-    border-radius: 15px;
-    padding: 30px 20px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  background-color: white;
+  flex: 1;
+  flex-basis: 150px;
+  border-radius: 15px;
+  padding: 30px 20px;
+  max-width: 360px;
+  margin: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 768px) {
     width: 200px;
     margin: 10px;
@@ -41,11 +42,9 @@ const CardIcon = styled.div`
   align-items: center;
 `
 const CardTitle = styled.div`
-   {
-    padding: 20px;
-    font-size: ${(props) => props.theme.fontsize.subtitle};
-    font-weight: 700;
-  }
+  padding: 20px;
+  font-size: ${(props) => props.theme.fontsize.subtitle};
+  font-weight: 700;
   @media only screen and (max-width: 768px) {
     padding: 10px 0px;
     font-size: 15px;
@@ -54,19 +53,15 @@ const CardTitle = styled.div`
 `
 
 const CardPractice = styled.div`
-   {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `
 const CardPracticWord = styled.div`
-   {
-    width: 110px;
-    font-size: ${(props) => props.theme.fontsize.subtitle};
-    font-weight: 700;
-  }
+  width: 110px;
+  font-size: ${(props) => props.theme.fontsize.subtitle};
+  font-weight: 700;
   @media only screen and (max-width: 768px) {
     width: 80px;
     font-size: 15px;
@@ -74,11 +69,10 @@ const CardPracticWord = styled.div`
   }
 `
 const PracticeAreaCardsStyle = styled.div`
-   {
-    display: flex;
-    justify-content: space-around;
-    margin: 5px 25px;
-  }
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: ${(props) => props.theme.margin.margin_content};
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;

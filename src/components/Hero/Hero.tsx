@@ -14,9 +14,9 @@ const HeroWrapper = styled.div`
   background-position: top;
   background-size: cover;
   padding: ${(props) => props.theme.margin.padding_section};
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     background-repeat: no-repeat;
-    background-size: 800px 100% cover;
+    background-size: auto 500px;
     background-position: bottom;
   }
 `

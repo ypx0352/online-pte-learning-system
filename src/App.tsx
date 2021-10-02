@@ -20,8 +20,6 @@ const GlobalStyles = createGlobalStyle`
 
 `
 
-import NavBar from "./components/Navbar/Navbar"
-
 function App() {
   return (
     <ThemeProvider theme={theme}>

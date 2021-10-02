@@ -46,6 +46,11 @@ const ALink = styled.a<{ white?: boolean }>`
   ${({ white }) => (white ? "background-color: white; color: black" : "background-color:#3BCBBE; color: white")};
   border-radius: 10px;
   padding: 15px;
+  &:hover {
+    background-color: white;
+    color: black;
+    transition: all 1s ease;
+  }
 `
 const NavbarWrapper = styled.div`
   background-color: ${(props) => props.theme.color.primary};

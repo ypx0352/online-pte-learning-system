@@ -1,44 +1,100 @@
-import StarRateIcon from "@material-ui/icons/StarRate"
-import { Avatar } from "@mui/material"
-import React from "react"
+import React from 'react'
+import { Container } from './Card.style'
+import { Information } from './Card.style'
+import { UserDetail } from './Card.style'
+import { Avatar } from '@mui/material'
+import { UserName } from './Card.style'
+import { Address } from './Card.style'
+import { Rating } from './Card.style'
+import { CardText } from './Card.style'
+import StarRateIcon from '@material-ui/icons/StarRate'
 
-import { Container } from "./Card.style"
-import { Information } from "./Card.style"
-import { UserName } from "./Card.style"
-import { Rating } from "./Card.style"
-import { CardText } from "./Card.style"
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/swiper-bundle.css';
+import 'swiper/components/navigation'; 
+import SwiperCore, {Navigation,} from 'swiper';
 
-const Card = (
-  {
-    // items,
-  }
-) => {
-  return (
-    <Container>
-      {/* {items.map(({
-            key,
-            avatar,
-            userName,
-            rating,
-            cardText,
-        }) => (
-            <> */}
-      <Information>
-        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg"></Avatar>
-        <UserName>Viezh Rober {"\n"} Warsay, Poland </UserName>
-        <Rating>
-          4.5 <StarRateIcon />
-        </Rating>
-      </Information>
-      <CardText>
-        Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut
-        standard.
-      </CardText>
-      {/* </>
-        )
-        )} */}
-    </Container>
-  )
+SwiperCore.use([Navigation])
+
+const items = [{
+    id: 1,
+    userName: 'Viezh Rober',
+    address: 'Warsaw, Poland',
+    texts: 'Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard. Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard.',
+    rating: '5'
+    
+},
+{
+    id: 2,
+    userName: 'Viezh Rober',
+    address: 'Warsaw, Poland',
+    texts: 'Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard. Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard.',
+    rating: '4.5'
+},
+{
+    id: 3,
+    userName: 'Viezh Rober',
+    address: 'Warsaw, Poland',
+    texts: 'Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard. Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard.',
+    rating: '3'
+},
+{
+    id: 3,
+    userName: 'Viezh Rober',
+    address: 'Warsaw, Poland',
+    texts: 'Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard. Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard.',
+    rating: '3'
+},
+{
+    id: 4,
+    userName: 'Viezh Rober',
+    address: 'Warsaw, Poland',
+    texts: 'Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard. Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard.',
+    rating: '4' 
+},
+{
+    id: 5,
+    userName: 'Viezh Rober',
+    address: 'Warsaw, Poland',
+    texts: 'Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard. Lorem lpsum is simply dummmy text of pringting and typeseeting industy. Lorem lpsum has sbeen theindsut standard.',
+    rating: '2'
+}]
+
+const Card = () => {
+    return (
+        
+            <Swiper
+                spaceBetween={25}
+                slidesPerView={3}
+             >
+
+            {items.map( user => (
+                <SwiperSlide key={user.id}>
+                    <Container>
+                        <Information>
+                            <UserDetail>
+                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg"></Avatar>
+                                <UserName>
+                                    {user.userName}
+                                    <Address>
+                                        {user.address}
+                                    </Address>
+                                </UserName>
+                            </UserDetail>
+                            <Rating>
+                                {user.rating} 
+                                <StarRateIcon></StarRateIcon>
+                            </Rating>
+                        </Information>
+                        <CardText>{user.texts}</CardText>
+                    </Container>
+            </SwiperSlide>
+            )
+            )}
+            </Swiper>
+        
+    )
 }
 
 export default Card

@@ -1,14 +1,12 @@
-import React from "react"
-
-import { ColorBar, TitleName } from "./Title.style"
+import React from 'react'
+import { TitleName } from './Title.style'
 
 const Title = () => {
-  return (
-    <div>
-      <TitleName>Students Love Cuckoo</TitleName>
-      <ColorBar />
-    </div>
-  )
+    return (
+        <div>
+            <TitleName>Students Love Cuckoo</TitleName>
+        </div>
+    )
 }
 
 export default Title

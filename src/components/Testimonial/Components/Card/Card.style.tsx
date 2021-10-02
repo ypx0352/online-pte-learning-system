@@ -27,7 +27,14 @@ export const UserName = styled.div`
   white-space: pre-line;
 `
 
-export const Rating = styled.div``
+export const Rating = styled.div`
+  color: #fea250;
+  display: flex;
+  .icon {
+    color: black;
+    margin-top: 0;
+  }
+`
 
 export const CardText = styled.p`
   max-width: 300px;

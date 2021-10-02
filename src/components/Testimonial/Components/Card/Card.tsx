@@ -27,7 +27,8 @@ const Card = (
         <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg"></Avatar>
         <UserName>Viezh Rober {"\n"} Warsay, Poland </UserName>
         <Rating>
-          4.5 <StarRateIcon />
+          <p className="icon">4.5 </p>
+          <StarRateIcon />
         </Rating>
       </Information>
       <CardText>

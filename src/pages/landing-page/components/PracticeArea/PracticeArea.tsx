@@ -1,5 +1,5 @@
-import { PracticeAreaCards } from "components/PracticeArea/Components/PracticeAreaCard/PracticeAreaCard"
-import { WeeklyPredictionCard } from "components/PracticeArea/Components/WeeklyPredictionCard/WeeklyPredictionCard"
+import { PracticeAreaCards } from "pages/landing-page/components/PracticeArea/Components/PracticeAreaCard/PracticeAreaCard"
+import { WeeklyPredictionCard } from "pages/landing-page/components/PracticeArea/Components/WeeklyPredictionCard/WeeklyPredictionCard"
 import styled from "styled-components"
 
 const PracticeAreaWrapper = styled.div`

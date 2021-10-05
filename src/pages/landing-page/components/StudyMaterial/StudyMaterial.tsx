@@ -1,4 +1,4 @@
-import Card from "components/StudyMaterial/Card/Card"
+import Card from "pages/landing-page/components/StudyMaterial/Card/Card"
 import React from "react"
 import styled from "styled-components"
 

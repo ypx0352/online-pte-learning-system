@@ -1,14 +1,14 @@
-import Footer from "components/Footer/Footer"
-import Hero from "components/Hero/Hero"
-import { PracticeArea } from "components/PracticeArea/PracticeArea"
-import StudyMaterial from "components/StudyMaterial/StudyMaterial"
-import Testimonial from "components/Testimonial/Testimonial"
+import Footer from "pages/landing-page/components/Footer/Footer"
+import Hero from "pages/landing-page/components/Hero/Hero"
+import { PracticeArea } from "pages/landing-page/components/PracticeArea/PracticeArea"
+import StudyMaterial from "pages/landing-page/components/StudyMaterial/StudyMaterial"
+import Testimonial from "pages/landing-page/components/Testimonial/Testimonial"
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { createGlobalStyle } from "styled-components"
 import theme from "styles/theme"
 
-import Navbar from "./components/Navbar/Navbar"
+import Navbar from "./pages/landing-page/components/Navbar/Navbar"
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');

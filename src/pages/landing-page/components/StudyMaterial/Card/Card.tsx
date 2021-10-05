@@ -1,8 +1,7 @@
+import logoLarge from "assets/images/studyMaterial/Feed-large.png"
+import logoSmall from "assets/images/studyMaterial/Feed-small.png"
 import React from "react"
 import styled from "styled-components"
-
-import logoLarge from "../../../assets/images/studyMaterial/Feed-large.png"
-import logoSmall from "../../../assets/images/studyMaterial/Feed-small.png"
 
 type Props = {
   text: string

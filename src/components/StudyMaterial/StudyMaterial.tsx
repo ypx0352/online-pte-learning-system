@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 const Container = styled.section`
   padding: ${(props) => props.theme.margin.container_padding};
   margin: auto;
-  max-width: 1440px;
+  max-width: ${(props) => props.theme.margin.max_width};
 `
 
 const Header = styled.section`

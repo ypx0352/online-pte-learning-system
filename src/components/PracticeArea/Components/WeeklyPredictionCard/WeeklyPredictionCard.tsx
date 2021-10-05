@@ -3,10 +3,9 @@ import backgroundImage from "assets/images/PracticeArea/WeeklyPredictionCard.jpg
 import styled from "styled-components"
 
 const WeeklyPredictionContainer = styled.div`
-  background-image: url(${backgroundImage});
-  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
   vertical-align: middle;
-  background-size: 100%;
   color: white;
   padding: 40px 40px;
   margin: 40px 0.5rem;
@@ -20,6 +19,38 @@ const WeeklyPredictionContainer = styled.div`
     font-weight: 500;
   }
 `
+const WeeklyPredictionBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(${backgroundImage});
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to bottom,
+      ${(props) => props.theme.color.secondary_deep},
+      ${(props) => props.theme.color.accent}
+    );
+    opacity: 0.6;
+  }
+`
+export const WeeklyPredictionContent = styled.div`
+  position: relative;
+  z-index: 5;
+  margin: auto;
+`
+
 const WeeklyPredictionArea = styled.div`
   padding: 50px;
   display: flex;
@@ -37,7 +68,7 @@ const PredictionCardStyle = styled.div`
 
 const PredictionNum = styled.div`
   font-size: ${(props) => props.theme.fontsize.title_lg};
-  font-weight: 500;
+  font-weight: 800;
   @media only screen and (max-width: 768px) {
     font-size: ${(props) => props.theme.fontsize.subtitle};
     font-weight: 500;
@@ -70,12 +101,15 @@ export const WeeklyPredictionCard = () => {
   })
   return (
     <WeeklyPredictionContainer>
-      <div className="WeeklyPredictionCardDate">Weekly Prediction 13/09 - 19/09</div>
-      <WeeklyPredictionArea>{cards}</WeeklyPredictionArea>
-      <PredictionPractice>
-        <div className="PredictionPracticWord">PRACTICE NOW</div>
-        <ArrowForwardIcon fontSize="small" />
-      </PredictionPractice>
+      <WeeklyPredictionBackground />
+      <WeeklyPredictionContent>
+        <div className="WeeklyPredictionCardDate">Weekly Prediction 13/09 - 19/09</div>
+        <WeeklyPredictionArea>{cards}</WeeklyPredictionArea>
+        <PredictionPractice>
+          <div className="PredictionPracticWord">PRACTICE NOW</div>
+          <ArrowForwardIcon fontSize="small" />
+        </PredictionPractice>
+      </WeeklyPredictionContent>
     </WeeklyPredictionContainer>
   )
 }

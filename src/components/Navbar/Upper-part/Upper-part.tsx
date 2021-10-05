@@ -5,7 +5,7 @@ import styled from "styled-components"
 const DIV = styled.div`
   padding: 0.1rem;
   margin: auto;
-  max-width: 1440px;
+  max-width: ${(props) => props.theme.margin.max_width};
 `
 
 const UL = styled.ul`

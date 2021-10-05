@@ -10,7 +10,7 @@ const FooterWrapper = styled.div`
 `
 const FooterContainer = styled.div`
   color: #ffffff;
-  max-width: 1440px;
+  max-width: ${(props) => props.theme.margin.max_width};
   padding: ${(props) => props.theme.margin.container_padding};
   margin: auto;
 `

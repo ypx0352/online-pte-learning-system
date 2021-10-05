@@ -27,7 +27,7 @@ const HeroContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
+  max-width: ${(props) => props.theme.margin.max_width};
   padding: ${(props) => props.theme.margin.container_padding};
   margin: auto;
 `

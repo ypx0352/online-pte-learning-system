@@ -2,7 +2,7 @@ import { KeyboardArrowDown as KeyboardArrowDownIcon } from "@material-ui/icons"
 import styled from "styled-components"
 
 const DIV = styled.div`
-  max-width: 1440px;
+  max-width: ${(props) => props.theme.margin.max_width};
   height: 72px;
   position: relative;
   background-color: ${(props) => props.theme.color.primary};

@@ -24,7 +24,8 @@ const margin = {
   item: "2rem",
   container_padding: "0 4rem",
   margin_content: "2rem 0",
-  padding_section: "1.5rem 0"
+  padding_section: "1.5rem 0",
+  max_width: "1312px"
 }
 
 export default {

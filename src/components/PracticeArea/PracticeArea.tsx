@@ -7,7 +7,7 @@ const PracticeAreaWrapper = styled.div`
   background-color: ${(props) => props.theme.color.background_color};
 `
 const PracticeAreaContainer = styled.div`
-  max-width: 1440px;
+  max-width: ${(props) => props.theme.margin.max_width};
   margin: auto;
   padding: ${(props) => props.theme.margin.container_padding};
 `

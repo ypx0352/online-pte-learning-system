@@ -1,10 +1,11 @@
 import Footer from "pages/landing-page/components/Footer/Footer"
 import Hero from "pages/landing-page/components/Hero/Hero"
 import { PracticeArea } from "pages/landing-page/components/PracticeArea/PracticeArea"
-import Login from "pages/landing-page/components/sign-in-up-page"
 import StudyMaterial from "pages/landing-page/components/StudyMaterial/StudyMaterial"
 import Testimonial from "pages/landing-page/components/Testimonial/Testimonial"
+import LoginPage from "pages/sign-in-up-page/components/login-page"
 import React from "react"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
 import { createGlobalStyle } from "styled-components"
 import theme from "styles/theme"
@@ -24,13 +25,22 @@ const GlobalStyles = createGlobalStyle`
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Navbar />
-      <Hero />
-      <PracticeArea />
-      <StudyMaterial />
-      <Testimonial />
-      <Footer />
+      <BrowserRouter>
+        <GlobalStyles />
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Hero />
+            <PracticeArea />
+            <StudyMaterial />
+            <Testimonial />
+          </Route>
+          <Route exact path="/login">
+            <LoginPage />
+          </Route>
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     </ThemeProvider>
   )
 }

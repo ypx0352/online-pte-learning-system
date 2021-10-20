@@ -62,7 +62,7 @@ const Down = () => (
       <STRONG>Cuckoo</STRONG>
       <UL>
         <LI>
-          <ALink href="#">Home</ALink>
+          <ALink href="/">Home</ALink>
         </LI>
         <LI>
           <ALink href="#" className="title">
@@ -71,7 +71,7 @@ const Down = () => (
           <KeyboardArrowDownIcon></KeyboardArrowDownIcon>
         </LI>
         <LI>
-          <ALink href="#">Login</ALink>
+          <ALink href="/login">Login</ALink>
         </LI>
         <LI>
           <ALink href="#" white>

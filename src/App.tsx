@@ -1,6 +1,7 @@
 import Footer from "pages/landing-page/components/Footer/Footer"
 import Hero from "pages/landing-page/components/Hero/Hero"
 import { PracticeArea } from "pages/landing-page/components/PracticeArea/PracticeArea"
+import Login from "pages/landing-page/components/sign-in-up-page"
 import StudyMaterial from "pages/landing-page/components/StudyMaterial/StudyMaterial"
 import Testimonial from "pages/landing-page/components/Testimonial/Testimonial"
 import React from "react"

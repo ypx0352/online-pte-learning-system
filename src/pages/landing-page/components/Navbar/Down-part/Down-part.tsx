@@ -74,7 +74,7 @@ const Down = () => (
           <ALink href="/login">Login</ALink>
         </LI>
         <LI>
-          <ALink href="#" white>
+          <ALink href="/signup" white>
             Sign up
           </ALink>
         </LI>

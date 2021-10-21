@@ -3,7 +3,7 @@ import Hero from "pages/landing-page/components/Hero/Hero"
 import { PracticeArea } from "pages/landing-page/components/PracticeArea/PracticeArea"
 import StudyMaterial from "pages/landing-page/components/StudyMaterial/StudyMaterial"
 import Testimonial from "pages/landing-page/components/Testimonial/Testimonial"
-import LoginPage from "pages/sign-in-up-page/components/login-page"
+import { SignUpPage, LoginPage, SignUpSuccPage } from "pages/sign-in-up-page/"
 import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
@@ -37,6 +37,12 @@ function App() {
           </Route>
           <Route exact path="/login">
             <LoginPage />
+          </Route>
+          <Route exact path="/signup">
+            <SignUpPage />
+          </Route>
+          <Route exact path="/signupsucc">
+            <SignUpSuccPage />
           </Route>
         </Switch>
         <Footer />
